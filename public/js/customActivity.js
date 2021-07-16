@@ -80,7 +80,7 @@ define([
     function onGetTokens (tokens) {
         // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
         console.log("Tokens function: "+JSON.stringify(tokens));
-        //authTokens = tokens;
+        authTokens = tokens;
     }
 
     function onGetEndpoints (endpoints) {
@@ -100,8 +100,9 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-           // "to": "{{Contact.Attribute.SMS_Test.PhoneNumber}}" //<----This should map to your data extension name and phone number column
-           "to": "918976734094"
+            "tokens": authTokens,
+            "to": "{{Contact.Attribute.SMS_Test.PhoneNumber}}" //<----This should map to your data extension name and phone number column
+           //"to": "918976734094"
         }];
 
         payload['metaData'].isConfigured = true;
