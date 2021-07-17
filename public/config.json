@@ -21,46 +21,31 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://apptestsms.herokuapp.com/journeybuilder/execute",
+            "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/execute",
             "verb": "POST",
-            "body": "",
-            "format": "json",
+            "body": "{\"body\":\"Hello from Twilio\",\"to\":\"918976734094\",\"from\":\"+18042772465\"}" ,
+            "format": "application/x-www-form-urlencoded",
             "useJwt": false,
-            "timeout": 2000
+            "timeout": 2000,
+            "headers": "{\"Authorization\":\"Basic QUNlMzIwNDAwODc5MTMxMGI2NmY0NTE2NGU1YzUxZDM3Zjo1MWQyNWNkYzlmMDdhM2ExMjVmMTc5YWY4NDVjNzM4OA==\"}" 
         }
     },
     "configurationArguments": {
       "applicationExtensionKey": "79b9654f-62e1-49a8-aaa7-38cd41b46ee1",
        "save": {
-           "url": "https://apptestsms.herokuapp.com/save",
-            "verb": "POST",
-            "body": "",
-            "format": "json",
-            "useJwt": false,
+           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/save",
             "timeout": 2000
        },
        "publish": {
-           "url": "https://apptestsms.herokuapp.com/publish",
-            "verb": "POST",
-            "body": "",
-            "format": "json",
-            "useJwt": false,
+           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/publish",
             "timeout": 2000
        },
        "validate": {
-           "url": "https://apptestsms.herokuapp.com/validate",
-            "verb": "POST",
-            "body": "",
-            "format": "json",
-            "useJwt": false,
+           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/validate",
             "timeout": 2000
        },
        "stop": {
-           "url": "https://apptestsms.herokuapp.com/stop",
-            "verb": "POST",
-            "body": "",
-            "format": "json",
-            "useJwt": false,
+           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/stop",
             "timeout": 2000
        }
     },
