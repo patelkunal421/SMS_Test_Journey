@@ -42,7 +42,7 @@
             
        },
        "validate": {
-        "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/validate",
+        "url": "https://apptestsms.herokuapp.com/validate",
         "verb": "GET",
          "timeout": 2000
     },
