@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Executed: "+req.body.inArguments[0]);
+    console.log("Executed: "+req.body.inArguments[0]);
     
     var requestBody = req.body.inArguments[0];
 
@@ -103,13 +103,13 @@ exports.execute = function (req, res) {
     const from = requestBody.messagingService;
     const body = requestBody.body;;
 
-    const client = require('twilio')(accountSid, authToken); 
+    const client = require('twilio')('ACe3204008791310b66f45164e5c51d37f', '51d25cdc9f07a3a125f179af845c7388'); 
      
     client.messages 
           .create({ 
-             body: body,
-             messagingService: from,
-             to: to
+             body: 'Hello World',
+             messagingService: 'MG5e5270b50d68a514c3e509854a36335e',
+             to: '918976734094'
            }) 
           .then(message => console.log(message.sid)) 
           .done();
