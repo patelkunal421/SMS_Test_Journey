@@ -43,10 +43,7 @@
            "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/publish",
             "timeout": 2000
        },
-       "validate": {
-           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/validate",
-            "timeout": 2000
-       },
+       
        "stop": {
            "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/stop",
             "timeout": 2000
