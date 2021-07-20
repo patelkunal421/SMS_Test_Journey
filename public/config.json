@@ -21,14 +21,10 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/journeybuilder/execute",
+            "url": "https://apptestsms.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                "authorization": "Basic QUNlMzIwNDAwODc5MTMxMGI2NmY0NTE2NGU1YzUxZDM3Zjo1MWQyNWNkYzlmMDdhM2ExMjVmMTc5YWY4NDVjNzM4OA=="
-              },
-            "body": "" ,
-            "format": "application/x-www-form-urlencoded",
+            "body": "",
+            "format": "json",
             "useJwt": false,
             "timeout": 2000
         }
@@ -38,24 +34,36 @@
        "save": {
            "url": "https://apptestsms.herokuapp.com/journeybuilder/save",
            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
             "timeout": 2000
             
        },
        "validate": {
         "url": "https://apptestsms.herokuapp.com/journeybuilder/validate",
-        "verb": "POST",
-         "timeout": 2000
+           "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
     },
        "publish": {
            "url": "https://apptestsms.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
-            "timeout": 2000
+           "body": "",
+           "format": "json",
+           "useJwt": false,
+           "timeout": 2000
        },
        
        "stop": {
            "url": "https://apptestsms.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
-            "timeout": 2000
+           "body": "",
+           "format": "json",
+           "useJwt": false,
+           "timeout": 2000
        }
     },
     "wizardSteps": [
