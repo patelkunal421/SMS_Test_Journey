@@ -103,13 +103,13 @@ exports.execute = function (req, res) {
     const from = requestBody.messagingService;
     const body = requestBody.body;;
 
-    const client = require('twilio')('ACe3204008791310b66f45164e5c51d37f', '51d25cdc9f07a3a125f179af845c7388'); 
+    const client = require('twilio')(accountSid, authToken); 
      
     client.messages 
           .create({ 
-             body: 'Hello World',
-             messagingService: 'MG5e5270b50d68a514c3e509854a36335e',
-             to: '918976734094'
+             body: body,
+             messagingService: messagingService,
+             to: to
            }) 
           .then(message => console.log(message.sid)) 
           .done();
