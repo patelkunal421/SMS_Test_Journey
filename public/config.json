@@ -36,16 +36,25 @@
     "configurationArguments": {
       "applicationExtensionKey": "79b9654f-62e1-49a8-aaa7-38cd41b46ee1",
        "save": {
-           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/save",
+           "url": "https://apptestsms.herokuapp.com/save",
+           "verb": "GET",
             "timeout": 2000
+            
        },
+       "validate": {
+        "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/validate",
+        "verb": "GET",
+         "timeout": 2000
+    },
        "publish": {
-           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/publish",
+           "url": "https://apptestsms.herokuapp.com/publish",
+           "verb": "GET",
             "timeout": 2000
        },
        
        "stop": {
-           "url": "https://api.twilio.com/2010-04-01/Accounts/ACe3204008791310b66f45164e5c51d37f/Messages/stop",
+           "url": "https://apptestsms.herokuapp.com/stop",
+           "verb": "GET",
             "timeout": 2000
        }
     },
