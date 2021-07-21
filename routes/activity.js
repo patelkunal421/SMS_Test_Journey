@@ -108,13 +108,14 @@ exports.execute = function (req, res) {
     const body = requestBody.body;
     console.log("body : " +body);
 
-    const client = require('twilio')(accountSid, authToken); 
+    var twilio = require('twilio');
+    var client = new twilio(accountSid, authToken);
     console.log("client : " +client);
     client.messages 
           .create({ 
-             body: body,
-             messagingService: from,
-             to: to
+             body:body,
+             From:'(804) 277-2465',
+             to:to
            }) 
           .then(message => console.log(message.sid)) 
           .done();
