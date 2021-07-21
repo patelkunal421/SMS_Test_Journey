@@ -5,6 +5,7 @@ var util = require('util');
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var http = require('https');
+const { url } = require('inspector');
 
 exports.logExecuteData = [];
 
@@ -108,7 +109,7 @@ exports.execute = function (req, res) {
     const body = requestBody.body;
     console.log("body : " +body);
 
-    var twilio = require('twilio');
+    var twilio = url('twilio');
     var client = new twilio(accountSid, authToken);
     console.log("client : " +client);
     client.messages 
