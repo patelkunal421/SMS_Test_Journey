@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
     const body = requestBody.body;
     console.log("body : " +body);
 
-    var twilio = url('twilio');
+    /*var twilio = url('twilio');
     var client = new twilio(accountSid, authToken);
     console.log("client : " +client);
     client.messages 
@@ -119,7 +119,19 @@ exports.execute = function (req, res) {
              to:to
            }) 
           .then(message => console.log(message.sid)) 
-          .done();
+          .done();*/
+
+  await(axios.post("https://api.twilio.com/2010-04-01/Accounts/" + accountSid + "/Messages.json", qs.stringify({
+  Body: body,
+  From: from,
+  To: to
+}), {
+  auth: {
+    username: accountSid,
+    password: authToken
+  }
+})
+.then(response => console.log(response.accountSid)));
 
 
 
